@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VinnyNavisworksAdapter", "src\VinnyNavisworksAdapter\VinnyNavisworksAdapter.csproj", "{CFD397EF-4E04-4ABD-B982-5BB440B265C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VinnyNavisworksLoader", "src\VinnyNavisworksLoader\VinnyNavisworksLoader.csproj", "{23185E5F-7FCF-4439-9BC6-5D8D59BB1E5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		D_N21|x64 = D_N21|x64
+		R_N21|x64 = R_N21|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFD397EF-4E04-4ABD-B982-5BB440B265C7}.D_N21|x64.ActiveCfg = D_N21|x64
+		{CFD397EF-4E04-4ABD-B982-5BB440B265C7}.D_N21|x64.Build.0 = D_N21|x64
+		{CFD397EF-4E04-4ABD-B982-5BB440B265C7}.R_N21|x64.ActiveCfg = R_N21|x64
+		{CFD397EF-4E04-4ABD-B982-5BB440B265C7}.R_N21|x64.Build.0 = R_N21|x64
+		{23185E5F-7FCF-4439-9BC6-5D8D59BB1E5D}.D_N21|x64.ActiveCfg = D_N21|x64
+		{23185E5F-7FCF-4439-9BC6-5D8D59BB1E5D}.D_N21|x64.Build.0 = D_N21|x64
+		{23185E5F-7FCF-4439-9BC6-5D8D59BB1E5D}.R_N21|x64.ActiveCfg = R_N21|x64
+		{23185E5F-7FCF-4439-9BC6-5D8D59BB1E5D}.R_N21|x64.Build.0 = R_N21|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3ADC4C6D-535F-4E96-A582-ADB0ABCD96D7}
+	EndGlobalSection
+EndGlobal

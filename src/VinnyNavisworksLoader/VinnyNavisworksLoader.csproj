@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+      <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+      <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+      <UseWPF>true</UseWPF>
+      <PlatformTarget>x64</PlatformTarget>
+      <Platforms>x64</Platforms>
+      <Configurations>D_N21;R_N21</Configurations>
+  </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'D_N21' ">
+        <DefineConstants>DEBUG</DefineConstants>
+    </PropertyGroup>
+
+    <Choose>
+        <When Condition=" '$(Configuration)' == 'D_N21' or '$(Configuration)' == 'R_N21'">
+            <PropertyGroup>
+                <VAR_1 Condition="'$(VAR_1)'==''">D:\Soft\Navisworks Manage 2021\Plugins\VinnyNavisworksLoader</VAR_1>
+                <TargetFramework>net48</TargetFramework>
+                <OutputPath Condition=" '$(Configuration)' == 'D_N21'">$(VAR_1)</OutputPath>
+                <OutputPath Condition=" '$(Configuration)' == 'R_N21'">$(SolutionDir)..\VinnyLibBin\Release\plugins\navisworks\2021</OutputPath>
+            </PropertyGroup>
+            <ItemGroup>
+                <PackageReference Include="Speckle.Navisworks.API" Version="2021.0.0">
+                    <ExcludeAssets>Runtime</ExcludeAssets>
+                </PackageReference>
+            </ItemGroup>
+        </When>
+    </Choose>
+
+    <ItemGroup>
+      <ProjectReference Include="..\VinnyNavisworksAdapter\VinnyNavisworksAdapter.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="VinnyPath.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

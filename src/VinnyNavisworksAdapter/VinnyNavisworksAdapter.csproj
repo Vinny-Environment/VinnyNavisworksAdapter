@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+      <AppendRuntimeIdentifierToOutputPath>true</AppendRuntimeIdentifierToOutputPath>
+      <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+      <UseWPF>true</UseWPF>
+      <PlatformTarget>x64</PlatformTarget>
+      <Platforms>x64</Platforms>
+      <Configurations>D_N21;R_N21</Configurations>
+  </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'D_N21' ">
+        <DefineConstants>DEBUG</DefineConstants>
+    </PropertyGroup>
+
+
+    <Choose>
+        <When Condition=" '$(Configuration)' == 'D_N21' or '$(Configuration)' == 'R_N21'">
+            <PropertyGroup>
+                <TargetFramework>net48</TargetFramework>
+                <OutputPath Condition=" '$(Configuration)' == 'D_N21'">$(SolutionDir)..\VinnyLibBin\Debug\plugins\navisworks\2021</OutputPath>
+                <OutputPath Condition=" '$(Configuration)' == 'R_N21'">$(SolutionDir)..\VinnyLibBin\Release\plugins\navisworks\2021</OutputPath>
+            </PropertyGroup>
+            <ItemGroup>
+                <PackageReference Include="Speckle.Navisworks.API" Version="2021.0.0" >
+                    <ExcludeAssets>Runtime</ExcludeAssets>
+                </PackageReference>
+                <Reference Include="VinnyLibConverterCommon">
+                    <HintPath>$(SolutionDir)..\VinnyLibBin\Debug\VinnyLibConverterCommon.dll</HintPath>
+                    <Private>False</Private>
+                    <EmbedInteropTypes>False</EmbedInteropTypes>
+                </Reference>
+                <Reference Include="VinnyLibConverterKernel">
+                    <HintPath>$(SolutionDir)..\VinnyLibBin\Debug\VinnyLibConverterKernel.dll</HintPath>
+                    <Private>False</Private>
+                    <EmbedInteropTypes>False</EmbedInteropTypes>
+                </Reference>
+                <Reference Include="VinnyLibConverterUI">
+                    <HintPath>$(SolutionDir)..\VinnyLibBin\Debug\ui\net48\VinnyLibConverterUI.dll</HintPath>
+                    <Private>False</Private>
+                    <EmbedInteropTypes>False</EmbedInteropTypes>
+                </Reference>
+                
+            </ItemGroup>
+        </When>
+    </Choose>
+
+    
+
+</Project>
