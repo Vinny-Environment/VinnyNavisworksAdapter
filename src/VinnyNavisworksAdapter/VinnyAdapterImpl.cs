@@ -40,8 +40,9 @@ namespace VinnyNavisworksAdapter
 
 #if DEBUG
             parameters = VinnyLibConverterCommon.ImportExportParameters.LoadFromFile(@"E:\Temp\Vinny\rengaTestParams2.XML");
+#else
+            if (vinnyWindow.ShowDialog() == true) parameters = vinnyWindow.VinnyParametets;
 #endif
-            //if (vinnyWindow.ShowDialog() == true) parameters = vinnyWindow.VinnyParametets;
             ExportTo(CreateData(), parameters);
 
             timer.Stop();

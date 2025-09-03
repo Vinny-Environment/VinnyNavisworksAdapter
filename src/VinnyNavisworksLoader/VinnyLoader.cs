@@ -55,7 +55,7 @@ namespace VinnyNavisworksLoader
             string VinnyLibConverterKernelPath = Path.Combine(vinnyPath, "VinnyLibConverterKernel.dll");
             string VinnyLibConverterUIPath = Path.Combine(vinnyPath, "ui", targetFramework, "VinnyLibConverterUI.dll");
 
-            string VinnyNavisworksAdapterPath = Path.Combine(vinnyPath, "plugins", "navisworks", navisYear, targetFramework, "VinnyNavisworksAdapter.dll");
+            string VinnyNavisworksAdapterPath = Path.Combine(vinnyPath, "plugins", "navisworks", navisYear, "VinnyNavisworksAdapter.dll");
 
             var ass1 = Assembly.LoadFrom(VinnyLibConverterCommonPath);
             var ass2 = Assembly.LoadFrom(VinnyLibConverterKernelPath);
