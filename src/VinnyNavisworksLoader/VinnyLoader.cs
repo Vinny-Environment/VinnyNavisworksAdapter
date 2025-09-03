@@ -7,6 +7,13 @@ using Autodesk.Navisworks.Api.Plugins;
 
 namespace VinnyNavisworksLoader
 {
+    [AddInPlugin(AddInLocation.Export,
+               CanToggle = true,
+               LoadForCanExecute = true,
+               CallCanExecute = CallCanExecute.Always,
+               Icon = "Resources\\vinnyIcon_16x16.bmp",
+               LargeIcon = "Resources\\vinnyIcon_32x32.bmp",
+               ShortcutWindowTypes = "")]
     [PluginAttribute("VinnyNavisworksAdapter", 
                     "VINNY",
                     ToolTip = "Vinny data exporter for Navisworks",

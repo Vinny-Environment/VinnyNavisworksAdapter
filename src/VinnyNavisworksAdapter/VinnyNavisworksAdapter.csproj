@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-      <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
-      <AppendRuntimeIdentifierToOutputPath>true</AppendRuntimeIdentifierToOutputPath>
+      <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+      <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
       <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
       <UseWPF>true</UseWPF>
       <PlatformTarget>x64</PlatformTarget>

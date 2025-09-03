@@ -37,9 +37,19 @@
     </ItemGroup>
 
     <ItemGroup>
+      <None Update="Resources\vinnyIcon_16x16.bmp">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Resources\vinnyIcon_32x32.bmp">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
       <None Update="VinnyPath.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Resources\" />
     </ItemGroup>
 
 </Project>
