@@ -8,6 +8,7 @@
       <PlatformTarget>x64</PlatformTarget>
       <Platforms>x64</Platforms>
       <Configurations>D_N21;R_N21</Configurations>
+      <LangVersion>9.0</LangVersion>
   </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'D_N21' ">
         <DefineConstants>DEBUG</DefineConstants>
@@ -37,6 +38,11 @@
                 </Reference>
                 <Reference Include="VinnyLibConverterUI">
                     <HintPath>$(SolutionDir)..\VinnyLibBin\Debug\ui\net48\VinnyLibConverterUI.dll</HintPath>
+                    <Private>False</Private>
+                    <EmbedInteropTypes>False</EmbedInteropTypes>
+                </Reference>
+                <Reference Include="Autodesk.Navisworks.Takeoff">
+                    <HintPath>E:\Software\AD\Autodesk_Navisworks_Manage_2021_Multilingual_Win_64bit_dlm\x64\NAVMAN\Autodesk\Autodesk.Navisworks.Takeoff.dll</HintPath>
                     <Private>False</Private>
                     <EmbedInteropTypes>False</EmbedInteropTypes>
                 </Reference>

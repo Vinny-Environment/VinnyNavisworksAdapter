@@ -4,7 +4,6 @@
       <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
       <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
       <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-      <UseWPF>true</UseWPF>
       <PlatformTarget>x64</PlatformTarget>
       <Platforms>x64</Platforms>
       <Configurations>D_N21;R_N21</Configurations>
@@ -17,7 +16,7 @@
     <Choose>
         <When Condition=" '$(Configuration)' == 'D_N21' or '$(Configuration)' == 'R_N21'">
             <PropertyGroup>
-                <VAR_1 Condition="'$(VAR_1)'==''">D:\Soft\Navisworks Manage 2021\Plugins\VinnyNavisworksLoader</VAR_1>
+                <VAR_1 Condition="'$(VAR_1)'==''">D:\Soft\Autodesk\Navisworks Manage 2021\Plugins\VinnyNavisworksLoader</VAR_1>
                 <TargetFramework>net48</TargetFramework>
                 <OutputPath Condition=" '$(Configuration)' == 'D_N21'">$(VAR_1)</OutputPath>
                 <OutputPath Condition=" '$(Configuration)' == 'R_N21'">$(SolutionDir)..\VinnyLibBin\Release\plugins\navisworks\2021</OutputPath>
@@ -31,7 +30,10 @@
     </Choose>
 
     <ItemGroup>
-      <ProjectReference Include="..\VinnyNavisworksAdapter\VinnyNavisworksAdapter.csproj" />
+      <ProjectReference Include="..\VinnyNavisworksAdapter\VinnyNavisworksAdapter.csproj">
+        <Private>False</Private>
+        <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+      </ProjectReference>
     </ItemGroup>
 
     <ItemGroup>
