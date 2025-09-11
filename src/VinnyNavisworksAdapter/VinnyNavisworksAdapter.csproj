@@ -45,12 +45,8 @@
                     <HintPath>E:\Software\AD\Autodesk_Navisworks_Manage_2021_Multilingual_Win_64bit_dlm\x64\NAVMAN\Autodesk\Autodesk.Navisworks.Takeoff.dll</HintPath>
                     <Private>False</Private>
                     <EmbedInteropTypes>False</EmbedInteropTypes>
-                </Reference>
-                
+                </Reference>             
             </ItemGroup>
         </When>
     </Choose>
-
-    
-
 </Project>
