@@ -87,6 +87,8 @@ namespace VinnyNavisworksAdapter
 
         private void ProcessingNavisObject(ModelItem navisObject, int parentObjectId)
         {
+            if (navisObject.IsHidden) return;
+
             VinnyLibDataStructureObject vinnyObjectDef = mVinnyModelDef.ObjectsManager.GetObjectById(mVinnyModelDef.ObjectsManager.CreateObject());
             vinnyObjectDef.Name = navisObject.DisplayName;
             vinnyObjectDef.UniqueId = navisObject.InstanceGuid.ToString("N");

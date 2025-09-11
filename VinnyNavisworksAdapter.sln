@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VinnyNavisworksAdapter", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VinnyNavisworksLoader", "src\VinnyNavisworksLoader\VinnyNavisworksLoader.csproj", "{23185E5F-7FCF-4439-9BC6-5D8D59BB1E5D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8D050BD0-25D3-4059-AD9E-9BA6AAB3BFEC}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		D_N21|x64 = D_N21|x64
