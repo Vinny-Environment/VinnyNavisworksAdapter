@@ -28,12 +28,12 @@ namespace VinnyNavisworksAdapter
     {
         internal IEnumerable<double>? LocalToWorldTransformation { get; set; }
         public List<int[]> Faces;
-        public List<float[]> Points;
+        public List<double[]> Points;
 
         internal NavisGeometryProcessing()
         {
             Faces = new List<int[]>();
-            Points = new List<float[]>();
+            Points = new List<double[]>();
 
         }
         public void Line(COMApi.InwSimpleVertex v1,
@@ -74,9 +74,9 @@ namespace VinnyNavisworksAdapter
               IsUpright
             );
 
-            Points.Add(new float[] { (float)vD1.X, (float)vD1.Y, (float)vD1.Z });
-            Points.Add(new float[] { (float)vD2.X, (float)vD2.Y, (float)vD2.Z });
-            Points.Add(new float[] { (float)vD3.X, (float)vD3.Y, (float)vD3.Z });
+            Points.Add(new double[] { vD1.X, vD1.Y, vD1.Z });
+            Points.Add(new double[] { vD2.X, vD2.Y, vD2.Z });
+            Points.Add(new double[] { vD3.X, vD3.Y, vD3.Z });
 
             Faces.Add(new int[] { Points.Count - 3, Points.Count - 2, Points.Count - 1 });
         }
@@ -100,7 +100,7 @@ namespace VinnyNavisworksAdapter
         private static NAV.Vector3D VectorFromVertex(InwSimpleVertex v)
         {
             var arrayV = (Array)v.coord;
-            return new NAV.Vector3D((float)arrayV.GetValue(1), (float)arrayV.GetValue(2), (float)arrayV.GetValue(3));
+            return new NAV.Vector3D((double)arrayV.GetValue(1), (double)arrayV.GetValue(2), (double)arrayV.GetValue(3));
         }
 
         private bool IsUpright = true;
